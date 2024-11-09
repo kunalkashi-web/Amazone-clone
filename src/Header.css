@@ -1,0 +1,147 @@
+.header {
+  height: 60px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+:link {
+  text-decoration: none;
+}
+
+.header__logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.header__searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.header__searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__optionLineOne {
+  font-size: 10px;
+}
+
+.header__optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-left: 10px;
+}
+
+.header__basketCount {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.menuicon {
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header__nav {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  .header__search {
+    position: relative;
+  }
+
+  .header__basketCount {
+    color: white;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #131921;
+    border-top: 1px solid rgb(255, 255, 255);
+  }
+
+  .nav-links.active {
+    display: flex;
+    padding: 10px 0px 10px 0px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav-links li {
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .nav-links li a {
+    padding: 0;
+  }
+}
