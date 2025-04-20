@@ -1,4 +1,4 @@
-# 🛍️ Amazon Basics Clone
+# 🛍️ Amazon Clone
 
 A modern e-commerce web application inspired by Amazon's design and functionality. This clone features Google Authentication, product browsing, and cart management — all powered by **React.js**, **Firebase**, and traditional **CSS** styling.
 
@@ -20,7 +20,7 @@ A modern e-commerce web application inspired by Amazon's design and functionalit
 **Frontend**
 - React.js
 - React Router DOM
-- Context API for global state (optional)
+- Context API for global state
 - CSS Modules / Plain CSS
 
 **Backend & Services**
