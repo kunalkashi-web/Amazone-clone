@@ -29,3 +29,11 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
+
+@media screen and (max-width: 690px) {
+  .subtotal {
+    width: 80%;
+    height: 100px;
+    padding: 20px;
+  }
+}
