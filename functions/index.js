@@ -20,7 +20,8 @@ app.use(express.json());
 app.get("/", (request, response) => response.status(200).send("hello world"));
 
 app.post("/payments/create", async (request, response) => {
-  const total = request.query.total;
+  const total = parseInt(request.query.total, 10);
+
 
   logger.info("Payment Request Received for this amount >>> ", {total});
 
