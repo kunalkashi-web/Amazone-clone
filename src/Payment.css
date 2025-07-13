@@ -1,51 +1,101 @@
 .payment {
-    background-color: white;
+  background-color: white;
 }
 
 .payment__container > h1 {
-    text-align: center;
-    padding: 10px;
-    font-weight: 400;
-    background-color: rgb(234, 237, 237);
-    border-bottom: 1px solid lightgray;
-  }
+  text-align: center;
+  padding: 10px;
+  font-weight: 400;
+  background-color: rgb(234, 237, 237);
+  border-bottom: 1px solid lightgray;
+}
 
 .payment__container > h1 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .payment__section {
-    display: flex;
-    padding: 20px;
-    margin: 0 20px;
-    border-bottom: 1px solid lightgray;
+  display: flex;
+  padding: 20px;
+  margin: 0 20px;
+  border-bottom: 1px solid lightgray;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  gap: 20px;
+  box-sizing: border-box;
 }
 
 .payment__title {
-    flex: 0.2;
+  flex: 0 0 20%;
+  min-width: 150px; /* prevents too small on wide screens */
+  font-weight: 600;
 }
 
-.payment__address, .payment__items, .payment__details {
-    flex: 0.8;
+.payment__address,
+.payment__items,
+.payment__details {
+  flex: 1 1 75%;
+  min-width: 280px;
 }
-  
+
 .payment__details > form {
-    max-width: 400px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.payment__details > h3 {
+  padding-bottom: 20px;
+}
+
+/* Button styling */
+.payment__details > form > div > button {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 36px;
+  border: 1px solid;
+  font-weight: bolder;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment__details > form > div > button:hover {
+  background-color: #e2b33c;
+}
+
+/* Responsive for tablets and smaller */
+@media screen and (max-width: 768px) {
+  .payment__section {
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 15px;
   }
 
-  .payment__details > h3 {
-    padding-bottom: 20px;
+  .payment__title,
+  .payment__address,
+  .payment__items,
+  .payment__details {
+    flex: 1 1 100%;
+    min-width: unset;
   }
 
+  .payment__details > form {
+    max-width: 100%;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .payment__container > h1 {
+    font-size: 1.4rem;
+    padding: 8px 5px;
+  }
 
   .payment__details > form > div > button {
-    background: #f0c14b;
-    border-radius: 2px;
-    width: 100%;
-    height: 30px;
-    border: 1px solid;
-    font-weight: bolder;
-    margin-top: 10px;
-    border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
+    height: 40px;
+    font-size: 1rem;
   }
+}
